@@ -2,7 +2,7 @@
 data "google_project" "project" {
   project_id = var.project_id
 }
-
+:
 # Local variables
 locals {
   # Service account name pattern: ops-${project_id}-sa
@@ -11,26 +11,31 @@ locals {
 
   # Viewer roles to grant at project level
   viewer_roles = [
-    "roles/viewer",
-    # Uncomment additional roles as needed:
-    # "roles/iam.securityReviewer",
-    # "roles/resourcemanager.organizationViewer",
-    # "roles/billing.viewer",
-    # "roles/logging.viewer",
-    # "roles/monitoring.viewer",
-    # "roles/compute.viewer",
-    # "roles/storage.objectViewer",
-    # "roles/bigquery.dataViewer",
-    # "roles/cloudsql.viewer",
-    # "roles/container.viewer",
-    # "roles/cloudkms.viewer",
-    # "roles/secretmanager.viewer",
-    # "roles/dns.reader",
-    # "roles/networkmanagement.viewer",
-    # "roles/cloudtrace.user",
-    # "roles/errorreporting.viewer",
-    # "roles/serviceusage.serviceUsageViewer",
-    # "roles/cloudasset.viewer",
+    "roles/viewer",                              # Base read access to project resources
+    "roles/iam.securityReviewer",               # View IAM policies within the project
+    "roles/cloudasset.viewer",                  # Inventory project assets
+    "roles/compute.viewer",                     # VM instances, networks, firewalls
+    "roles/container.viewer",                   # GKE clusters and configurations
+    "roles/appengine.viewer",                   # App Engine applications
+    "roles/run.viewer",                         # Cloud Run services
+    "roles/cloudfunctions.viewer",              # Cloud Functions
+    "roles/storage.objectViewer",               # GCS buckets and objects
+    "roles/bigquery.dataViewer",                # BigQuery datasets and tables
+    "roles/cloudsql.viewer",                    # Cloud SQL instances
+    "roles/spanner.viewer",                     # Spanner databases
+    "roles/bigtable.viewer",                    # Bigtable instances
+    "roles/datastore.viewer",                   # Datastore/Firestore
+    "roles/cloudkms.viewer",                    # Encryption keys and keyrings
+    "roles/secretmanager.viewer",               # Secret configurations (not values)
+    "roles/binaryauthorization.attestorsViewer", # Binary authorization policies
+    "roles/dns.reader",                         # DNS zones and records
+    "roles/networkmanagement.viewer",           # VPCs, subnets, connectivity tests
+    "roles/vpcaccess.viewer",                   # VPC access connectors
+    "roles/logging.viewer",                     # Audit logs and log entries
+    "roles/monitoring.viewer",                  # Metrics, dashboards, alerts
+    "roles/cloudtrace.user",                    # Trace data
+    "roles/errorreporting.viewer",              # Error reports
+    "roles/serviceusage.serviceUsageViewer",    # Enabled APIs and services
   ]
 
   # Workload Identity Pool principal sets
