@@ -11,7 +11,6 @@ locals {
 
   # Viewer roles to grant at project level
   viewer_roles = [
-    "roles/viewer",                              # Base read access to project resources
     "roles/iam.securityReviewer",               # View IAM policies within the project
     "roles/cloudasset.viewer",                  # Inventory project assets
     "roles/compute.viewer",                     # VM instances, networks, firewalls
