@@ -53,7 +53,7 @@ locals {
     "monitoring.googleapis.com",
     "storage.googleapis.com",
     "bigquery.googleapis.com",
-    "sql.googleapis.com",
+    "sqladmin.googleapis.com",
     "container.googleapis.com",
     "cloudkms.googleapis.com",
     "secretmanager.googleapis.com",
