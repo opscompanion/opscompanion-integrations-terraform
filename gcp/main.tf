@@ -15,7 +15,6 @@ locals {
     "roles/cloudasset.viewer",                  # Inventory project assets
     "roles/compute.viewer",                     # VM instances, networks, firewalls
     "roles/container.viewer",                   # GKE clusters and configurations
-    "roles/appengine.viewer",                   # App Engine applications
     "roles/run.viewer",                         # Cloud Run services
     "roles/cloudfunctions.viewer",              # Cloud Functions
     "roles/storage.objectViewer",               # GCS buckets and objects
@@ -53,7 +52,7 @@ locals {
     "monitoring.googleapis.com",
     "storage.googleapis.com",
     "bigquery.googleapis.com",
-    "sql.googleapis.com",
+    "sqladmin.googleapis.com",
     "container.googleapis.com",
     "cloudkms.googleapis.com",
     "secretmanager.googleapis.com",
