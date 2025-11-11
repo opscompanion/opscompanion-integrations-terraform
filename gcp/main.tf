@@ -2,7 +2,7 @@
 data "google_project" "project" {
   project_id = var.project_id
 }
-:
+
 # Local variables
 locals {
   # Service account name pattern: ops-${project_id}-sa
