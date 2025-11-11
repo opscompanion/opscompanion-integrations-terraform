@@ -17,9 +17,23 @@ output "service_account_email" {
 }
 ```
 
+## AWS Integration
+
+```hcl
+module "opscompanion-aws-integration" {
+  source = "github.com/opscompanion/opscompanion-integrations-terraform/aws"
+
+  role_name     = "opscompanion-readonly-role"  # Optional, defaults to this value
+  custom_org_id = "your-org-id"
+}
+
+output "role_arn" {
+  value = module.opscompanion-aws-integration.role_arn
+}
+```
+
 ## Coming Soon
 
-- AWS
 - Azure
 - Oracle Cloud
 - DigitalOcean
