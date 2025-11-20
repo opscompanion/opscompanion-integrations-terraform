@@ -32,8 +32,37 @@ output "role_arn" {
 }
 ```
 
+## Azure Integration
+
+```hcl
+module "opscompanion-azure-integration" {
+  source = "github.com/opscompanion/opscompanion-integrations-terraform/azure"
+
+  subscription_id   = "your-subscription-id"
+  custom_org_id     = "your-org-id"
+  app_name          = "opscompanion-readonly-app"           # Optional, defaults to this value
+  custom_role_name  = "OpsCompanion Custom Reader Role"     # Optional, defaults to this value
+}
+
+output "application_id" {
+  value = module.opscompanion-azure-integration.application_id
+}
+
+output "tenant_id" {
+  value = module.opscompanion-azure-integration.tenant_id
+}
+
+output "client_secret" {
+  value     = module.opscompanion-azure-integration.client_secret
+  sensitive = true
+}
+
+output "service_principal_id" {
+  value = module.opscompanion-azure-integration.service_principal_id
+}
+```
+
 ## Coming Soon
 
-- Azure
 - Oracle Cloud
 - DigitalOcean
