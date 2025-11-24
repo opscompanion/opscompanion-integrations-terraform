@@ -34,6 +34,8 @@ locals {
     "roles/cloudtrace.user",                    # Trace data
     "roles/errorreporting.viewer",              # Error reports
     "roles/serviceusage.serviceUsageViewer",    # Enabled APIs and services
+    "roles/browser",                             # List GCP projects
+    "roles/pubsub.viewer",                       # Pub/Sub topics, subscriptions, snapshots
   ]
 
   # Workload Identity Pool principal sets
