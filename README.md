@@ -17,6 +17,7 @@ output "service_account_email" {
 }
 ```
 
+
 ## AWS Integration
 
 ```hcl
@@ -32,8 +33,23 @@ output "role_arn" {
 }
 ```
 
+## Support
+Have questions or feedback? We're here to help:
+
+- Email: [support@opscompanion.ai](mailto:support@opscompanion.ai)
+- Discord: [Join our Discord server](https://discord.com/invite/7FKTdScyJm)
+- Documentation: [opscompanion.ai/docs](https://opscompanion.ai/docs)
+
 ## Coming Soon
 
 - Azure
 - Oracle Cloud
 - DigitalOcean
+
+
+## Updates & Roadmap
+Stay up to date with the latest improvements:
+
+- [Changelog](https://opscompanion.ai/docs/changelog)
+- [X](https://x.com/OpsCompanion)
+- [Linkedin](https://www.linkedin.com/company/opscompanion/)
