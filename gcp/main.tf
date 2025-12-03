@@ -18,6 +18,7 @@ locals {
     "roles/run.viewer",                         # Cloud Run services
     "roles/cloudfunctions.viewer",              # Cloud Functions
     "roles/storage.objectViewer",               # GCS buckets and objects
+    "roles/storage.viewer",                     # GCS bucket metadata and configuration
     "roles/bigquery.dataViewer",                # BigQuery datasets and tables
     "roles/cloudsql.viewer",                    # Cloud SQL instances
     "roles/spanner.viewer",                     # Spanner databases
