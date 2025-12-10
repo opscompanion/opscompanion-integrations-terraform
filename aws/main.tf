@@ -47,3 +47,18 @@ resource "aws_iam_role_policy_attachment" "readonly_access" {
   role       = aws_iam_role.opscompanion_readonly.name
   policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
 }
+
+
+# Example EC2 instance for OpsCompanion scanning or testing
+resource "aws_instance" "opscompanion_example" {
+  ami                    = "ami-0c94855ba95c71c99" # Example Amazon Linux 2 AMI in us-east-1 – adjust per region
+  instance_type          = "t3.micro"
+  associate_public_ip_address = false
+
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "opscompanion-example-ec2"
+    }
+  )
+}
