@@ -17,6 +17,7 @@ output "service_account_email" {
 }
 ```
 
+
 ## AWS Integration
 
 ```hcl
@@ -31,6 +32,7 @@ output "role_arn" {
   value = module.opscompanion-aws-integration.role_arn
 }
 ```
+
 
 ## Azure Integration
 
@@ -66,3 +68,17 @@ output "service_principal_id" {
 
 - Oracle Cloud
 - DigitalOcean
+
+## Support
+Have questions or feedback? We're here to help:
+
+- Email: [support@opscompanion.ai](mailto:support@opscompanion.ai)
+- Discord: [Join our Discord server](https://discord.com/invite/7FKTdScyJm)
+- Documentation: [opscompanion.ai/docs](https://opscompanion.ai/docs)
+
+## Updates & Roadmap
+Stay up to date with the latest improvements:
+
+- [Changelog](https://opscompanion.ai/docs/changelog)
+- [X](https://x.com/OpsCompanion)
+- [Linkedin](https://www.linkedin.com/company/opscompanion/)
